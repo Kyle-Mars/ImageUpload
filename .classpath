@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/retro/eclipse-workspace/HTML Generator/jsoup-1.15.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/retro/eclipse-workspace/HTML Generator/jsoup-1.15.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/retro/eclipse-workspace/HTML Generator/jsoup-1.15.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/retro/eclipse-workspace/HTML Generator/org.eclipse.jgit-6.4.0.202211300538-r.jar"/>
+	<classpathentry kind="lib" path="C:/Users/retro/eclipse-workspace/HTML Generator/org.eclipse.jgit-6.4.0.202211300538-r-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/retro/.m2/repository/com/github/imagekit-developer/imagekit-java/2.0.0/imagekit-java-2.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/retro/eclipse-workspace/HTML Generator/annotations-13.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/retro/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/retro/.m2/repository/com/squareup/okhttp3/okhttp/3.10.0/okhttp-3.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/retro/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/retro/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
