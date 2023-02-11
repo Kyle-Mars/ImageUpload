@@ -46,14 +46,20 @@ public class HTMLGenerator {
 	
 	public static void main(String[] args) throws IOException, InternalServerException, BadRequestException, UnknownException, ForbiddenException, TooManyRequestsException, UnauthorizedException, ConflictException, PartialSuccessException, NotFoundException
 	{
+		//Set up looping variables.
 		boolean repeat = true;
 		boolean cancel = false;
 		Object correct = 1;
+		
+		//Set up the JFrame used for prompting information.
 		FlatIntelliJLaf.setup();
 		JFrame frame = new JFrame();
-		ImageKitKeys keys = new ImageKitKeys();
+		ImageIcon mainIcon = new ImageIcon("C:\\Users\\retro\\OneDrive\\Documents\\GitHub\\ImageUpload\\ImageUpload\\favicon.ico");
+	    Image mainImage = mainIcon.getImage();
+		frame.setIconImage(mainImage);
 		
 		//Initialized the ImageKit SDK.
+		ImageKitKeys keys = new ImageKitKeys();
 		ImageKit imageKit = ImageKit.getInstance();
 		Configuration config = new Configuration(keys.getPublic(), keys.getPrivate(), keys.getEndpoint());
 		imageKit.setConfig(config);
@@ -81,17 +87,18 @@ public class HTMLGenerator {
 			    if(img == null)
 			    {
 			    	cancel = true;
-			    	break;
+			    	return;
 			    }
-	
+			    
+			    //Ensure image is properly rotated.
 			    image = ImageIO.read(img);
 			    image = rotate(image, -90.0);
 			        
+			    //Verify that the selected image is correct.
 			    ImageIcon icon = new ImageIcon(image);
 			    Image newimage = icon.getImage();
 			    Image newimg = newimage.getScaledInstance(300, 400,  java.awt.Image.SCALE_SMOOTH);
-			    icon = new ImageIcon(newimg);
-			        
+			    icon = new ImageIcon(newimg);      
 			    correct = JOptionPane.showConfirmDialog(frame, null, "Confirm Image:", 0, 0, icon);
 			}
 		        
@@ -100,16 +107,16 @@ public class HTMLGenerator {
 			if(name == null) 
 			{
 				cancel = true;
-			    break;
+			    return;
 			}
 			renameImage(name);
 			    
-			//Prompt User to add Alt Text
+			//Prompt User to add Alt Text.
 			Object alt = JOptionPane.showInputDialog(frame, "Enter Alt Text:");
 			if(alt == null)
 			{
 			    cancel = true;
-			    break;
+			    return;
 			}
 			  
 			//Prompt User for pages to post images to.
