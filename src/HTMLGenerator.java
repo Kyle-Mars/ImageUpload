@@ -66,7 +66,7 @@ public class HTMLGenerator {
 		
 		while(repeat)
 		{
-			while(correct.equals(1))
+			do
 		    {
 				//Prompt User to select a jpg file to upload.
 				JFileChooser jfc = new JFileChooser();
@@ -101,6 +101,7 @@ public class HTMLGenerator {
 			    icon = new ImageIcon(newimg);      
 			    correct = JOptionPane.showConfirmDialog(frame, null, "Confirm Image:", 0, 0, icon);
 			}
+			while(correct.equals(1));
 		        
 		    //Prompt User for new image name, then convert and compress the image.
 			Object name = JOptionPane.showInputDialog(frame, "Enter New Image Name");

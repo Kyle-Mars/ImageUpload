@@ -14,9 +14,13 @@
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
   <icon>C:\Users\retro\OneDrive\Documents\GitHub\ThePerfectPixl.github.io\favicon.ico</icon>
+  <singleInstance>
+    <mutexName>Image Upload</mutexName>
+    <windowTitle>Image Upload</windowTitle>
+  </singleInstance>
   <jre>
     <path>C:\Program Files\Java\jdk-17</path>
-    <requiresJdk>false</requiresJdk>
+    <requiresJdk>true</requiresJdk>
     <requires64Bit>false</requires64Bit>
     <minVersion></minVersion>
     <maxVersion></maxVersion>
